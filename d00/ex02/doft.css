@@ -1,0 +1,83 @@
+body {
+  background-color: rgb(58, 58, 58);
+}
+
+h1 {
+  font-size: 40px;
+  font-style: oblique;
+  width: 400px;
+  text-shadow: 10px 10px 10px rgba(255, 255, 255, 0.356),
+    10px 10px 20px rgba(255, 255, 255, 0.356),
+    10px 10px 40px rgba(255, 255, 255, 0.356),
+    10px 10px 80px rgba(255, 255, 255, 0.356);
+}
+.header {
+  background-color: rgb(121, 121, 121);
+  height: 120px;
+  width: 1500px;
+  margin-right: 160px;
+  margin-left: 160px;
+  padding: 10px 40px;
+  border: solid;
+  border-radius: 10px;
+  border-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 10px 20px;
+}
+.LR {
+  position: absolute;
+  border: solid;
+  background-color: rgb(121, 121, 121);
+  border-radius: 10px;
+  border-color: black;
+  width: 140px;
+  height: 450px;
+  box-shadow: 10px 10px 20px;
+}
+.box42 {
+  position: absolute;
+  width: 800px;
+  height: 650px;
+  margin: 5px 490px;
+  align-items: center;
+  border: solid;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px;
+}
+.controll img {
+  margin-left: 20px;
+  align-items: center;
+  width: 100px;
+  height: 85px;
+}
+.center img {
+  position: absolute;
+  width: 800px;
+  height: 650px;
+  border-radius: 10px;
+}
+.small img {
+  position: absolute;
+  float: right;
+}
+.nouveau {
+  position: absolute;
+  border: solid;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  width: 500px;
+  height: 160px;
+  margin-left: 300px;
+}
+.txt {
+  margin-left: 5px;
+  font-size: large;
+}
+
+.search-container {
+  margin-left: 5px;
+  border: thick;
+}
