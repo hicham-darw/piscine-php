@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(247, 214, 186, 0.603);
+}
+
+nav h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px 10%;
+    padding: 5px 0px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.container-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.first {
+    display: flex;
+}
+.first div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto;
+}
+
+.second {
+    display: flex;
+
+}
+.second div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto;
+}
+
+.third {
+    display: flex;
+}
+.third div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto;
+}
+
+.fourth {
+    display: flex;
+}
+.fourth div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto ;
+}
+
+.fifth {
+    display: flex;
+}
+.fifth div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto;
+}
+
+.sixth {
+    display: flex;
+}
+.sixth div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto;
+}
+
+.seventh {
+    display: flex;
+}
+.seventh div {
+    border: 1px solid black;
+    width: 5.6%;
+    height: auto;
+}
+
+
+div .hide {
+    border: none;
+}
+
+
+.container-table {
+    margin: 30px 10px;
+}
+.container-table div div span {
+    margin: 1 auto;
+    font-size: 12px;
+}
+.container-table div div {
+    display: flex;
+    flex-direction: column;
+}
+.container-table div div strong {
+    text-align: center;
+    font-size: 30px;
+}
+.container-table div div h6 {
+    text-align: right;
+}
+
+.lant {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.lant div {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.lant div span {
+    margin: 0px 0px 0px 1px;
+    font-size: 12px;
+}
+.lant div strong {
+    padding: 0px 15px;
+    font-size: 25px;
+    text-align: center;
+}
+.lant div h6 {
+    text-align: right;
+}
+
+
+@media screen and (max-width:950px) {
+    .container-table div div strong {
+        font-size: 22px;
+    }
+
+    .lant div span {
+        font-size: 8px;
+    }
+    .lant div strong {
+        padding: 0px 8px;
+        font-size: 15px;
+    }
+    .lant div h6 {
+        font-size: 8px;
+        margin-right: 1px;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    nav h1 {
+        font-size: 20px;
+    }
+
+    .container-table div div strong {
+        font-size: 10px;
+    }
+
+    .container-table div div span {
+        padding: 1px 0px 0px 1px;
+        font-size: 5px;
+    }
+
+    .container-table div div h6 {
+        font-size: 5px;
+    }
+    
+    .lant {
+        width: 100%;
+        height: auto;
+    }
+    .lant div strong {
+        padding: 0px 0px;
+        font-size: 12px;
+    }
+}
