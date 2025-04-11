@@ -1,5 +1,5 @@
 <?php
-	//Dcoding - coding with Othman
+
 function ft_split($str){
 	$i = 0;
 	$index = 0;
