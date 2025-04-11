@@ -21,6 +21,7 @@
 		$dest = trim($dest);
 	}
 	$origin = $origin . $dest;
-	echo $origin . "\n";
-	
+	$argv[1] = $origin;
+
+	echo $argv[1] . "\n";
 ?>
