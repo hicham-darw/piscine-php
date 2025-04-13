@@ -8,12 +8,7 @@ function ft_is_sort($array) : bool{
 		array_push($tmp_arr, $array[$i]);
 		$i += 1;
 	}
-	sort($tmp_arr);
-	echo "-------| tmp_arr |-----------\n";
-	print_r($tmp_arr);
-	echo "-------| array |-----------\n";
-	print_r($array);
-	
+	sort($tmp_arr);	
 	$i = 0;
 	while($i < count($array))
 	{
