@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-	if($argc < 2)
+	if($argc != 2)
 		exit;
 	$filename = fopen($argv[1], "r") or die ("Unable open file!");
 	$content = null;
@@ -32,7 +32,4 @@
 	}
 	fclose($filename);
 	echo $content ;
-	
 ?>
-
-
