@@ -12,14 +12,12 @@
 			}
 			else
 				$user_login = unserialize($file_content);
-			if($user_login['login'] == $login && $user_login['passwd'] == hash("whirlpool", $passwd))
+			if($user_login['login'] == $login && 							    $user_login['passwd'] == hash("whirlpool", $passwd))
 				return true;
 			else
 				return false;	
 		}
 		else
-		{
 			return false;
-		}
 	}
 ?>
