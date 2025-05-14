@@ -40,13 +40,10 @@ public function __toString(){
 
 public static function doc(){
 	if(file_exists("Color.doc.txt")){
-		$file = fopen("Color.doc.txt", "r");
-		while( !feof($file) ){
-			$line = fgets($file);
-			echo $line;
-		}
+		$str = file_get_contents("Color.doc.txt");
+		return $str;
 	}
-	return;
+	return false;
 }
 
 public function add($colr){
