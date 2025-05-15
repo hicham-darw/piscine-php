@@ -1,4 +1,4 @@
-<- Vertex -----------------------------------------
+<- Vertex -------------------------------------------------------------------------------
 The Vertex class A graph data structure
 
 an instance : new Vertex (array( 'x' => 0.00, 'y' => 0.00, 'z' => 0.00, 'w' => 1, 'color' => new Color()))
@@ -8,8 +8,6 @@ attributes : - static boolean called $verbose controll displays ;
 	     - 'w' set by default 1.00 ;
 	     - $color an instance from class Color ;
 
-===============
-     methods  | __construct(), __destruct(), __toString(), static func doc() ; 
-===============
+methods  :  __construct(), __destruct(), __toString(), static func doc();
 
------------------------------------------ Vertex ->
+------------------------------------------------------------------------------- Vertex ->
