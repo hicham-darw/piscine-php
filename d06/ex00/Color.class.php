@@ -2,14 +2,14 @@
 
 class Color {
 	public static $verbose = false;
-	public int $red;
-	public int $green;
-	public int $blue;
+	public int $red = 255;
+	public int $green = 255;
+	public int $blue = 255;
 
 public function __construct($rgb){
 
 	if(isset($rgb['rgb']) && $rgb['rgb'] < 16777216){
-		$this->red   = intval($rgb['rgb'], 10) / 65536 ;
+		$this->red   = intval($rgb['rgb'], 10) / 65536;
 		$this->green = (intval($rgb['rgb'], 10) % 65536) / 256;
 		$this->blue  = (intval($rgb['rgb'], 10) % 65536) % 256;
 	}else if (isset($rgb['red'])   && $rgb['red']   > -1 && $rgb['red']   < 256 &&
@@ -35,7 +35,7 @@ public function __destruct(){
 }
 
 public function __toString(){
-	return "Color( red: $this->red, green: $this->green, blue: $this->blue)";
+	return "Color( red: $this->red, green: $this->green, blue: $this->blue )";
 }
 
 public static function doc(){
