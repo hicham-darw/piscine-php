@@ -8,7 +8,7 @@
 /* ************************************************************************** */
 
 
-require_once 'Color.class.php';
+require_once '../ex00/Color.class.php'; //use path to your class Color
 require_once 'Vertex.class.php';
 
 Color::$verbose = False;
@@ -17,6 +17,7 @@ print( Vertex::doc() );
 Vertex::$verbose = True;
 
 $vtxO  = new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+
 print( $vtxO  . PHP_EOL );
 
 $red   = new Color( array( 'red' => 255, 'green' =>   0, 'blue' =>   0 ) );
