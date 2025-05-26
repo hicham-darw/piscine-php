@@ -9,4 +9,5 @@ class Targaryen {
 			return "burns alive";
 	}
 }
+
 ?>
