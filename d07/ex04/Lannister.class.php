@@ -2,14 +2,14 @@
 
 class Lannister{
 
-public function my_fn(){
-	echo "With pleasure, but only ina tower in winterfall, then.\n";
+public function response_1(){
+	echo "With pleasure, but only in a tower in Winterfell, then.\n";
+}
+public function response_2(){
+	echo "Not even if I'm drunk !\n";
+	return;
 }
 
-public function my_fn2(){
-	echo "Not even if I'm drunk !\n";
-	exit();
-}
 }
 
 ?>
