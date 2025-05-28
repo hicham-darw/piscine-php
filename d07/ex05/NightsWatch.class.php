@@ -10,11 +10,10 @@ class NightsWatch implements IFighter {
 		}			
 		return;
 	}
+
 	public function fight(){
 		return;
 	}
-
 }
-
 
 ?>
