@@ -17,20 +17,9 @@ class UnholyFactory {
 		foreach(Fighter::$childs as $child){
 			if($child === $requested_fighters){
 				echo "(Factory fabricates a fighter of type {$requested_fighters})\n";
-				if($child === "foot soldier"){
-					$reflector = new ReflectionClass('Footsoldier');
-					$obj = $reflector->newInstanceWithoutConstructor();
-					return $obj;
-				}else if($child === "archer"){
-					$reflector = new ReflectionClass($child);
-					$obj = $reflector->newInstanceWithoutConstructor();
-					return $obj;
-				}else if($child === "assassin"){
-					$reflector = new ReflectionClass($child);
-					$obj = $reflector->newInstanceWithoutConstructor();
-					return $obj;
-				}else
-					return null;
+				$reflector = new ReflectionClass(str_replace(" ", "", ucfirst($child)));
+				$obj = $reflector->newInstanceWithoutConstructor();
+				return $obj;
 			}
 		}
 		echo "(Factory hasn't absorbed any fighter of type {$requested_fighters})\n";
