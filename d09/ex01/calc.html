@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div>
+		<form action="" ethod="POST">
+			<input type="text" id="var1"/>
+			<select id="op">
+				<option>+</option>
+				<option>-</option>
+				<option>/</option>
+				<option>*</option>
+				<option>%</option>
+			</select>
+			<input type="text" id="var2"/>
+			<button type="submit" id="tryMe" onclick="getResult()" value="Try me!">Try me!</button>
+		</form>
+
+		<script>
+			function pleaseUse(){
+				alert("Please, use me...");
+			}
+			setInterval(pleaseUse, 30000);
+			function getResult(){
+				let var1 =parseInt(document.getElementById('var1').value);
+				let op = document.getElementById('op').value;
+				let var2 =parseInt(document.getElementById('var2').value);
+				if(var1 < 0 || var2 < 0)
+					alert("Error :\(");
+				else if(var2 == 0 && (op == '/' || op == '%'))
+					alert("It's over 9000!");
+				else{
+					let res;
+					if(op == '+'){
+						res = var1 + var2;
+						alert(res);
+					}else if(op == '-'){
+						res = var1 - var2;
+						alert(res);
+					}else if(op == '*'){
+						res = var1 * var2;
+						alert(res);
+					}else if(op == '/'){
+						res = var1 / var2;
+						alert(res);
+					}else{
+						res = var1 % var2;
+						alert(res);
+					}
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>
