@@ -3,30 +3,52 @@
 <head>
 	<title>balloon</title>
 	<style>
-		.balloon {
-			width: 200px;
+		button {
+			border-radius: 50%;
 			height: 200px;
+			width : 200px;
 			background-color: red;
-			border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-			position: relative;
-		}
-		.balloon:after {
-			content: '';
-			position: absolute;
-			bottom: -540px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 2px;
-			height: 40px;	
-		}
-		.balloon.grow {
-			transform: scale(1,2);
 		}
 	</style>
 </head>
 <body>
-	<div class="balloon" onclick="this.classList.toggle('grow')">
-	</div>
+	<button id="balloon" onclick="grow()" onmouseout="shrink(this)" onmouseover="normal(this)"></button>
+	<script>
+		function grow(){
+			const element = document.getElementById("balloon");
+			if(element.offsetWidth < "420" && element.offsetHeight < "420"){
+				element.style.width = (element.offsetWidth + 10) + "px";
+				element.style.height = (element.offsetHeight + 10)+"px";
+			}else{
+				element.style.width = "200px";
+				element.style.height = "200px";
+			}
+			if(element.style.backgroundColor == "red")
+				element.style.backgroundColor = "green";
+			else if(element.style.backgroundColor == "green")
+				element.style.backgroundColor = "blue";
+			else
+				element.style.backgroundColor = "red";
+		}
+		function shrink(btn){
+			if(btn.offsetWidth != "200"){
+				btn.style.width = (btn.offsetWidth - 5) + "px";
+				btn.style.height = (btn.offsetHeight - 5) + "px";
+			}
+			if(btn.style.backgroundColor == "red")
+				btn.style.backgroundColor = "blue";
+			else if(btn.style.backgroundColor == "green")
+				btn.style.backgroundColor = "red";
+			else
+				btn.style.backgroundColor = "green";
+			
+		}
+		function normal(btn){
+			if(btn.offsetWidth != "200"){
+				btn.style.width = (btn.offsetWidth + 5) + "px";
+				btn.style.height = (btn.offsetHeight + 5) + "px";
+			}		
+		}
+	</script>
 </body>
 </html>
-
