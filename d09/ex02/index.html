@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
 	<title>TO DO</title>
+	<script src="todo.js"></script>
 </head>
 
 <body>
@@ -11,31 +12,5 @@
 	<button onclick="createNew()">New</button>
 	<div id="ft_list"></div>
 
-	<script>
-		<!--------- create new element li -------------->
-		function createNew(){
-			let task = prompt("new Task ?", "TO DO");
-			if(task != ""){
-				const newLi = document.createElement('li');
-				const div = document.getElementById('ft_list');
-				newLi.innerHTML = task;
-				newLi.setAttribute("onclick", "remove(id)");
-				div.insertBefore(newLi, div.children[0]);
-				let len = div.children.length;
-				let i = 0;
-				while(i < len){
-					div.children[i].setAttribute('id', i);
-					i++;
-				}
-			}
-		}
-		<!------------- remove element ------------------>
-		function remove(id){
-			if(confirm("are you sure!, want delete this TO DO?")){
-				const li = document.getElementById(id);
-				li.remove();
-			}
-		}
-	</script>
 </body>
 </html>
