@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+	</script>
+</head>
+<body>
+	<input type="text" id="var1"/>
+	<select id="op">
+		<option>+</option>
+		<option>-</option>
+		<option>/</option>
+		<option>*</option>
+		<option>%</option>
+	</select>
+	<input type="text" id="var2"/>
+	<button type="submit" id="tryMe" value="Try me!">Try me!</button>
+
+	<script>
+		$(document).ready(function(){
+			$('#tryMe').click(function(){
+				if($('#var1').val() < 0 || $('#var2').val() < 0)
+					alert('Error :\(');
+				else if(($('#op').val() == '/' || $('#op').val() == '%') && ($('#var2').val() == 0))
+					alert('It\'s over 9000!');
+				else{
+					if($('#op').val() == '+')
+						alert(parseInt($('#var1').val()) + parseInt($('#var2').val()));
+					else if($('#op').val() == '-')
+						alert(parseInt($('#var1').val()) - parseInt($('#var2').val()));
+					else if($('#op').val() == '/')
+						alert(parseInt($('#var1').val()) / parseInt($('#var2').val()));
+					else if($('#op').val() == '*')
+						alert(parseInt($('#var1').val()) * parseInt($('#var2').val()));
+					else
+						alert(parseInt($('#var1').val()) % parseInt($('#var2').val()));
+				}
+			});
+		});			
+	</script>
+</body>
+</html>
