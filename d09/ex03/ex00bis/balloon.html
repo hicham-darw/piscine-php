@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>balloon</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+	</script>
+	<style>
+		button {
+			border-radius: 50%;
+			height: 200px;
+			width : 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<button id="balloon"></button>
+	<script>
+		$(document).ready(function(){
+			$('#balloon').click(function(){
+				var width = parseInt($(this).css("width"));
+				// change width and height button
+				if(parseInt($(this).css("height")) != 420){
+					$(this).css("height", (width + 10) + "px");
+					$(this).css("width", (width + 10) + "px");
+				}else{
+					$(this).css("height", "200px");
+					$(this).css('width', "200px");
+				}
+				// change colors red - green - blue --
+				if($(this).css('background-color') == 'rgb(255, 0, 0)')
+					$(this).css('background-color', 'rgb(0, 255, 0)');
+				else if($(this).css('background-color') == 'rgb(0, 255, 0)')
+					$(this).css('background-color', 'rgb(0, 0, 255)');
+				else if($(this).css('background-color', 'rgb(0, 0, 255)'))
+					$(this).css('background-color', 'rgb(255, 0, 0)');
+			});
+			$('#balloon').mouseout(function(){
+				var width = parseInt($(this).css('width'));
+				if(width != 200){
+					$(this).css('width', (width - 5) + 'px');
+					$(this).css('height', (width - 5) + 'px');
+				}
+				if($(this).css('background-color') == 'rgb(255, 0, 0)')
+					$(this).css('background-color', 'rgb(0, 0, 255)');
+				else if($(this).css('background-color') == 'rgb(0, 255, 0)')
+					$(this).css('background-color', 'rgb(255, 0, 0)');
+				else if($(this).css('background-color') == 'rgb(0, 0, 255)')
+					$(this).css('background-color', 'rgb(0, 255, 0)');
+			});
+		});
+	</script>
+</body>
+</html>
