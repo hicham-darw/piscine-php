@@ -5,11 +5,10 @@ $(document).ready(function(){
 		if(todo != "" && todo != null){
 			$('#ft_list').prepend("<p>" + todo + "</p>");
 		}
-		let childs = div.children('p');
-		var i = 0;
-		while(i < childs.length){
-			childs[i].setAttribute("id", i);
-			i++;
+	});
+	$('#ft_list').on("click", 'p', function(){
+		if(confirm("are you sure! wanna delete it")){
+			$(this).remove();
 		}
 	});
 });
