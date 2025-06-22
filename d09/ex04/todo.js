@@ -3,7 +3,6 @@ $(document).ready(function(){
 		var request = new XMLHttpRequest();
 		request.onload = function(){
 		      document.getElementById("list").innerHTML = this.response;
-			console.log(this.responseText);
 		}
 		request.open("GET", "select.php", true);
 		request.send();
@@ -16,7 +15,18 @@ $(document).ready(function(){
 				document.getElementById('list').innerHTML = this.response;
 			}
 			
-			request.open("GET", "insert.php?q=" + todo, true);
+			request.open("POST", "insert.php?q=" + todo, true);
+			request.send();
+		}
+	});
+	$('#delete').click(function(){
+		let id = prompt("choose what you need delete", "id");
+		if(  id  ){
+			var request = new XMLHttpRequest();
+			request.onload = function(){
+				document.getElementById('list').innerHTML = this.response;
+			}
+			request.open("POST", "delete.php?q=" + id, true);
 			request.send();
 		}
 	});
